@@ -8,7 +8,7 @@
 > No bugs will put us in shame
 > Resolved all just the same
 
-## The projects inside is:
+## The projects inside are:
 
 ### Backend Path:
 
