@@ -1,15 +1,17 @@
 // Import the encryptors functions here.
 const cipher = require("./encryptors.js");
 let cipherMethodChosen = "caesar";
-let caesarShift = 1;
+let caesarShift = 5;
 
 const encodeMessage = (str) => {
   if (cipherMethodChosen === "caesar") {
     return cipher.caesar(str, caesarShift);
   } else if (cipherMethodChosen === "symbol") {
     return cipher.symbol(str);
-  } else {
+  } else if (cipherMethodChosen === "reverse") {
     return cipher.reverse(str);
+  } else {
+    return cipher.reverse(cipher.symbol(cipher.caesar(str, caesarShift)));
   }
 };
 
@@ -18,8 +20,10 @@ const decodeMessage = (str) => {
     return cipher.caesar(str, caesarShift * -1);
   } else if (cipherMethodChosen === "symbol") {
     return cipher.symbol(str);
-  } else {
+  } else if (cipherMethodChosen === "reverse") {
     return cipher.reverse(str);
+  } else {
+    return cipher.reverse(cipher.symbol(cipher.caesar(str, caesarShift * -1)));
   }
 };
 
@@ -52,6 +56,10 @@ const handleCipherMethod = (userInput) => {
       );
       process.stdin.once("data", handleInput);
     }
+  } else {
+    cipherMethodChosen = "mix";
+    process.stdout.write("Enter the message you would like to encrypt...\n> ");
+    process.stdin.once("data", handleInput);
   }
 };
 
@@ -67,5 +75,7 @@ const handleCipherMethodCaesarShift = (userInput) => {
 };
 
 // Run the program.
-process.stdout.write("Enter the cipher method...(caesar/reverse/symbol)\n> ");
+process.stdout.write(
+  "Enter the cipher method... mix(default)/caesar/reverse/symbol\n> "
+);
 process.stdin.on("data", handleCipherMethod);
