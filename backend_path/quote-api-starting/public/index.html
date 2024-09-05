@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Quote API</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <h1>Quote API</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="add-quote.html">Add a New Quote</a>
+    </nav>
+    <h2>Get Quotes</h2>
+    <div class="request-buttons">
+      <div>
+        <button id="fetch-random">Fetch a Random Quote</button>
+        <button id="fetch-quotes">Fetch all Quotes</button>
+      </div>
+      <div>
+        <input id="author" value="" />
+        <button id="fetch-by-author">Fetch by Author</button>
+      </div>
+    </div>
+    <div id="quote-container"></div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form class="edit-inputs">
+          <div>
+            <label type="text" for="edit-quote">Quote text:</label>
+            <textarea id="edit-quote" rows="4" cols="50"> </textarea>
+          </div>
+          <div>
+            <label for="edit-person">Person:</label>
+            <input id="edit-person" value="" />
+          </div>
+          <div class="button-flex-mid">
+            <button id="submit-edit">Edit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+body {
+  background-color: #2e4a99;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+nav {
+  width: 80%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: #fff;
+}
+
+nav a {
+  margin: 10px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+input {
+  font-size: 16px;
+  padding: 10px;
+}
+
+button {
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  background-color: #2e4a99;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #5788fa;
+  transition: background-color 0.2s;
+}
+
+#quote-container {
+  padding: 10px;
+  width: 60%;
+}
+
+.single-quote {
+  padding: 10px;
+}
+
+.quote-text {
+  font-style: italic;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #2e4a99;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#submit-edit {
+  width: 30%;
+}
+
+.button-flex-mid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+}
+
+#edit-person {
+  margin-left: 32px;
+}
+#edit-quote {
+  margin-left: 5px;
+}
