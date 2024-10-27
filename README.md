@@ -13,3 +13,8 @@
 ### Backend Path:
 
 1. Mixed Message
+2. Message Mixer
+3. Guess Number
+4. Find Your Hat
+5. Quote Random Pick
+6. Machine Boss

@@ -9,7 +9,6 @@ minionRouter.param('minionId', (req, res, next, value)=>{
         const minionId = Number(value);
         if(minionId>0){
             req.minionId = value;
-            console.log(minionId);
             next();
         }else{
             res.status(404).send('minion id not valid')
